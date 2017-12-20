@@ -180,7 +180,7 @@ extension ViewController: FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if let user = user{
-            print("****Successfully signed in with user: \(user.email)." )
+            print("****Successfully signed in with user: \(user.email!)." )
         }
     }
     

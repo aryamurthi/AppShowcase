@@ -23,12 +23,14 @@ class StatsViewController: UIViewController {
     
     var gameStats = [GameStatistics]()
     var db: Firestore!
+//
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         db = Firestore.firestore()
-     
+        
         configureBackground()
         
         self.numberOfWins.text = String(gameStats[0].numberOfWins)
@@ -37,7 +39,7 @@ class StatsViewController: UIViewController {
         self.numberOfSwitches.text = String(gameStats[0].numberOfSwitches)
         self.numberOfStays.text = String(gameStats[0].numberOfStays)
         self.numberOfAttempts.text = String(gameStats[0].numberOfAttempts)
-        self.winPercentageHadYouSwitched.text = String(format: "%.f", Double(gameStats[0].numberOfWinsHadYouSwitchedEveryTime)/Double(gameStats[0].numberOfAttempts) * 100)
+        self.winPercentageHadYouSwitched.text = String(format: "%.f", (Double(gameStats[0].numberOfWinsHadYouSwitchedEveryTime)/Double(gameStats[0].numberOfAttempts)) * 100)
         
     }
     
@@ -45,6 +47,7 @@ class StatsViewController: UIViewController {
         super.viewDidAppear(animated)
         loadData()
     }
+    
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         
@@ -85,7 +88,7 @@ class StatsViewController: UIViewController {
                 let winPercentageHadYouSwitched = docData["winPercentageHadYouSwitched"] as! Double
                 
                 self.gameStats.append(GameStatistics(numberOfWins: numberOfWins, numberOfLosses: numberOfLosses, winPercentage: winPercentage, numberOfSwitches: numberOfSwitches, numberOfStays: numberOfStays, winPercentageHadYouSwitched: winPercentageHadYouSwitched, numberOfWinsHadYouSwitchedEveryTime: numberOfWinsHadYouSwitchedEveryTime, numberOfAttempts: numberOfAttempts))
-               
+                
             }
         }
     }

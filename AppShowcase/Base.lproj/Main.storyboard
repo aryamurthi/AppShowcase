@@ -411,6 +411,13 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps2-43-OjI">
+                                <rect key="frame" x="536" y="185" width="69" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2hR-81-nOx"/>
@@ -422,6 +429,7 @@
                         <outlet property="numberOfSwitches" destination="CFh-ea-bWL" id="byL-WY-Mpo"/>
                         <outlet property="numberOfWins" destination="EQV-Ei-E0h" id="y5t-3g-tUA"/>
                         <outlet property="winPercentage" destination="EzW-ag-tg5" id="cnj-jg-fgD"/>
+                        <outlet property="winPercentageHadYouSwitched" destination="Ps2-43-OjI" id="HxV-Qh-9NY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7M-Y4-1Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
